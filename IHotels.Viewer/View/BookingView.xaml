@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="IHotels.Viewer.View.BookingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="700" d:DesignWidth="900">
+
+    <Border Background="#1c2833" CornerRadius="30">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="850"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="550"/>
+            </Grid.RowDefinitions>
+
+            <Button BorderThickness="0" Grid.Column="0" Grid.Row="1" Height="30" Width="30" Background="Transparent" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,50">
+                <WrapPanel>
+                    <Image Source="C:\Users\Nadav\source\repos\IHotels\IHotels.Viewer\Images\return.png"
+                   ToolTip="Return"/>
+                </WrapPanel>
+            </Button>
+
+            <Button BorderThickness="0" Grid.Column="0" Grid.Row="1" Height="30" Width="30" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0"
+                    Name="BtnAddBooking" Click="BtnAddBooking_Click">
+                <WrapPanel>
+                    <Image Source="C:\Users\Nadav\source\repos\IHotels\IHotels.Viewer\Images\add-user.png"
+                   ToolTip="Add booking"/>
+                </WrapPanel>
+            </Button>
+
+            <Button BorderThickness="0" Grid.Column="0" Grid.Row="1" Height="30" Width="30" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,130,0,0"
+                    Name="BtnRemoveBooking" Click="BtnRemoveBooking_Click">
+                <WrapPanel>
+                    <Image Source="C:\Users\Nadav\source\repos\IHotels\IHotels.Viewer\Images\remove-user.png"
+                   ToolTip="Remove booking"/>
+                </WrapPanel>
+            </Button>
+
+            <Button BorderThickness="0" Grid.Column="0" Grid.Row="1" Height="30" Width="30" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,210,0,0"
+                    Name="BtnEditBooking" Click="BtnEditBooking_Click">
+                <WrapPanel>
+                    <Image Source="C:\Users\Nadav\source\repos\IHotels\IHotels.Viewer\Images\edit.png"
+                   ToolTip="Edit booking"/>
+                </WrapPanel>
+            </Button>
+
+            <TextBlock Grid.Row="0" Grid.Column="1" Foreground=" #7c98f4 " FontSize="30" VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center" FontStyle="Italic">List of all current booking</TextBlock>
+            <Image Source="C:\Users\Nadav\source\repos\IHotels\IHotels.Viewer\Images\calendar.png"
+                   Grid.Column="1"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="210,0,0,0"
+                   Height="30"/>
+
+            <DataGrid IsReadOnly="True"
+                      Grid.Row="1" Grid.Column="1" Background="#58679c" Foreground="Black" Margin="20" x:Name="DgBooking" SelectedCellsChanged="DgBooking_SelectedCellsChanged" CopyingRowClipboardContent="DgBooking_CopyingRowClipboardContent" />
+        </Grid>
+    </Border>
+</UserControl>

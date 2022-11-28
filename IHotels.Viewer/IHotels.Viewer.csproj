@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\add-user.png" />
+    <None Remove="Images\bed.png" />
+    <None Remove="Images\booking.png" />
+    <None Remove="Images\calendar.png" />
+    <None Remove="Images\edit.png" />
+    <None Remove="Images\hotel.png" />
+    <None Remove="Images\key.png" />
+    <None Remove="Images\multiply.png" />
+    <None Remove="Images\remove-user.png" />
+    <None Remove="Images\return.png" />
+    <None Remove="Images\user-profile.png" />
+    <None Remove="Images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\add-user.png" />
+    <Resource Include="Images\bed.png" />
+    <Resource Include="Images\booking.png" />
+    <Resource Include="Images\calendar.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\hotel.png" />
+    <Resource Include="Images\key.png" />
+    <Resource Include="Images\multiply.png" />
+    <Resource Include="Images\remove-user.png" />
+    <Resource Include="Images\return.png" />
+    <Resource Include="Images\user-profile.png" />
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+
+</Project>
